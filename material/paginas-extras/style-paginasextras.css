@@ -1,46 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+}
 #container-iframe {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 10px;
+
 }
 
-#coluna1 {
-    width: 40%;
-    padding: 20px;
+.titulo1{
+    padding: 10px;
+}
+
+.titulo2{
+    padding: 10px;
+}
+
+.coluna{
+    width: 97vw;
     box-sizing: border-box;
+    margin: auto;
 }
-
-#coluna2 {
-    width: 60%;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
 
 .container-coletor {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+    margin-bottom: 30px;
+    padding-top: 10px;
 }
 
 .bloco {
+    height: 250px;
+    max-width: 350px;
+    background-color: var(--bg-color);
+    padding: 3px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bl-conteudo{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    height: 250px;
-    background-color: var(--bg-color);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bl-conteudo > h3, p {
+    padding: 7px;
+}
+
+.inform-coletor{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.icon-inform{
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
 }
 
 .button-agenda {
     background-color: #4CAF50;
     color: #fff;
     border: none;
+    margin-top: 10px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -48,19 +82,4 @@
 
 .button-agenda:hover {
     background-color: #3e8e41;
-}
-
-@media (max-width: 900px) {
-    #container-iframe {
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        gap: 0px;
-    }
-
-    #coluna1, #coluna2 {
-        padding: 0px;
-        width: 100%;
-    }
 }
