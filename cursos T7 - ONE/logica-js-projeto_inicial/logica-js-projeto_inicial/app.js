@@ -9,4 +9,4 @@ prompt ('Escolha um número entre 1 e 10');
 
 
 //Condição
-if (numeroSecreto == )
+// if (numeroSecreto == )
