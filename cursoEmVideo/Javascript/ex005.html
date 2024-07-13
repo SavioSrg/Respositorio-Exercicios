@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: aqua;
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">iniciando o estudos de DOM</h1>
+    <p name="paragrafo">Aqui vai o resultado</p>
+    <p name=" paragrafo_html">Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div class="colorir">Clique aqui</div>
+
+    <script>
+        // selecionar por marca/tag
+        var divbloco = window.document.getElementsByTagName('div')[0];
+
+        // selecionar por ID
+        var divbloco1 = window.document.getElementsById('titulo');
+        
+        // selecionar por Nome
+        var divbloco2 = window.document.getElementsByName('paragrafo_html');
+
+        // selecionar por classe
+        var divbloco3 = window.document.getElementsByClassName('colorir');
+
+        // selecionar por seletor
+        var divbloco4 = window.document.querySelector('div.colorir');
+    </script>
+</body>
+</html>
