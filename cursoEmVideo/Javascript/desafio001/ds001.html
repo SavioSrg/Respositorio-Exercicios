@@ -24,6 +24,11 @@
             box-shadow: 5px 5px 10px #00000046;
         }
 
+        div{
+            text-align: center;
+            padding: 8px;
+        }
+
         footer{
             color: white;
             text-align: center;
@@ -41,7 +46,7 @@
             <p>asdasd</p>
         </div>
         <div id="foto">
-            <img src="amanhecer.png" alt="Foto do Dia">
+            <img id="imagem" src="amanhecer.png" alt="Foto do Dia">
 
         </div>
     </section>
@@ -52,21 +57,22 @@
     <script>
         function carregar(){
             var msg = window.document.getElementById('msg')
-            var img = window.document.getElementById('foto')
+            var img = window.document.getElementById('imagem')
             var data = new Date()
-            // var hora = data.getHours()
-            var hora = 20
+            var hora = data.getHours()
             msg.innerHTML = `Agora são ${hora} horas.`
 
             if (hora >= 0 && hora < 12){
-                // BOM DIA
+                // BOM DIA #7EA3A0
+                document.body.style.background = '#7EA3A0'
                 img.src = 'amanhecer.png'
             } else if (hora >= 12 && hora < 18){
-                // BOA TARDE
+                // BOA TARDE #93A2B9
+                document.body.style.background = '#93A2B9'
                 img.src = 'tarde.png'
             } else {
-                //BOA NOITE
-                img.src= 'noite.png'
+                //BOA NOITE #375472
+                document.body.style.background = '#375472'
                 img.src = 'noite.png'
             }
         }
